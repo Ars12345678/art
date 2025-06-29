@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Разноцветный текст на весь экран</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #000;
+      font-family: Arial, sans-serif;
+      font-size: 10vw;
+      font-weight: bold;
+      user-select: none;
+    }
+    .rainbow-text {
+      display: flex;
+    }
+    .rainbow-text span {
+      color: red;
+      animation: rainbow 3s infinite;
+      animation-timing-function: linear;
+      margin: 0 0.1em;
+    }
+    .rainbow-text span:nth-child(1) { animation-delay: 0s; }
+    .rainbow-text span:nth-child(2) { animation-delay: 0.2s; }
+    .rainbow-text span:nth-child(3) { animation-delay: 0.4s; }
+    .rainbow-text span:nth-child(4) { animation-delay: 0.6s; }
+    .rainbow-text span:nth-child(5) { animation-delay: 0.8s; }
+    .rainbow-text span:nth-child(6) { animation-delay: 1s; }
+    .rainbow-text span:nth-child(7) { animation-delay: 1.2s; }
+    .rainbow-text span:nth-child(8) { animation-delay: 1.4s; }
+    .rainbow-text span:nth-child(9) { animation-delay: 1.6s; }
+    .rainbow-text span:nth-child(10) { animation-delay: 1.8s; }
+    .rainbow-text span:nth-child(11) { animation-delay: 2s; }
+    .rainbow-text span:nth-child(12) { animation-delay: 2.2s; }
+    .rainbow-text span:nth-child(13) { animation-delay: 2.4s; }
+    .rainbow-text span:nth-child(14) { animation-delay: 2.6s; }
+    .rainbow-text span:nth-child(15) { animation-delay: 2.8s; }
+
+    @keyframes rainbow {
+      0% { color: red; }
+      16% { color: orange; }
+      33% { color: yellow; }
+      50% { color: green; }
+      66% { color: blue; }
+      83% { color: indigo; }
+      100% { color: violet; }
+    }
+  </style>
+</head>
+<body>
+  <div class="rainbow-text" aria-label="Артём любит Полину">
+    <span>А</span><span>р</span><span>т</span><span>ё</span><span>м</span>
+    <span> </span>
+    <span>л</span><span>ю</span><span>б</span><span>и</span><span>т</span>
+    <span> </span>
+    <span>П</span><span>о</span><span>л</span><span>и</span><span>н</span><span>у</span>
+  </div>
+</body>
+</html>
